@@ -1,0 +1,25 @@
+type metaCarroInput = 
+ record {
+   ano: text;
+   flota: text;
+   marca: text;
+   modelo: text;
+   motor: text;
+   vin: text;
+ };
+type metaCarro = 
+ record {
+   ano: text;
+   flota: text;
+   marca: text;
+   modelo: text;
+   motor: text;
+   vin: text;
+ };
+service : {
+  deleteCarro: (text) -> ();
+  getCarro: (text) -> (metaCarro) query;
+  newCarro: (text, metaCarroInput) -> ();
+  updateCarro: (text, metaCarroInput) -> ();
+  whoami: () -> (principal);
+}

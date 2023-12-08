@@ -1,0 +1,27 @@
+type metaMantenimientoInput = 
+ record {
+   descripcion: text;
+   fecha: text;
+   idCarro: text;
+   marcas: text;
+   piezas_instaladas: blob;
+   piezas_remplazadas: blob;
+   tipo: text;
+ };
+type metaMantenimiento = 
+ record {
+   descripcion: text;
+   fecha: text;
+   idCarro: text;
+   marcas: text;
+   piezas_instaladas: blob;
+   piezas_remplazadas: blob;
+   tipo: text;
+ };
+service : {
+  deleteMantenimiento: (text) -> ();
+  getMantenimiento: (text) -> (metaMantenimiento) query;
+  newMantenimiento: (text, metaMantenimientoInput) -> ();
+  updateMantenimiento: (text, metaMantenimientoInput) -> ();
+  whoami: () -> (principal);
+}

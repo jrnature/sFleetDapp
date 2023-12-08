@@ -1,0 +1,25 @@
+type metaUsuarioInput = 
+ record {
+   aMaterno: text;
+   aPaterno: text;
+   nombre: text;
+   password: text;
+   role: text;
+   user: text;
+ };
+type metaUsuario = 
+ record {
+   aMaterno: text;
+   aPaterno: text;
+   nombre: text;
+   password: text;
+   role: text;
+   user: text;
+ };
+service : {
+  deleteUsuario: (text) -> ();
+  getUsuario: (text) -> (metaUsuario) query;
+  newUsuario: (text, metaUsuarioInput) -> ();
+  updateUsuario: (text, metaUsuarioInput) -> ();
+  whoami: () -> (principal);
+}

@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "usuario": {
+      "main": "src/sFleetDApp_backend/usuario/main.mo",
+      "type": "motoko"
+    },
+    "carro": {
+      "main": "src/sFleetDApp_backend/carro/main.mo",
+      "type": "motoko"
+    },
+    "mantenimiento": {
+      "main": "src/sFleetDApp_backend/mantenimiento/main.mo",
+      "type": "motoko"
+    },
+    "sFleetDApp_frontend": {
+      "dependencies": [
+      
+      ],
+      "frontend": {
+        "entrypoint": "src/sFleetDApp_frontend/src/index.html"
+      },
+      "source": [
+        "src/sFleetDApp_frontend/assets",
+        "dist/sFleetDApp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
